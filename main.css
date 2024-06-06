@@ -1,0 +1,70 @@
+﻿/* עיצוב מעלית */
+.blackline {
+height: 7px;
+background-color: #000000;
+}
+    
+        /* עיצוב אלמנט המעלית */
+        .elevator {
+          width: 50px;
+          height: 50px;
+          background-image: url('elv.png');
+          background-size: cover;
+          background-repeat: no-repeat;
+          position: absolute;
+          bottom: 0;
+          transition: transform 0.5s;
+          margin-left: 200px;
+         
+         
+
+         
+    
+
+          }
+
+
+
+          @keyframes moveUp {
+            from {
+              transform: translateY(var(--end-pos));
+            }
+            to {
+              transform: translateY(var(--start-pos));
+            }
+          }
+      
+          .elevator-up {
+            animation: moveUp 2s forwards;
+            
+          }
+          @keyframes moveUpb {
+            from {
+              transform: translateY(-110px);
+            }
+            to {
+              transform: translateY(0);
+            }
+          }
+      
+          .elevator-upb {
+            animation: moveUpb 2s forwards;
+          }
+
+.box{
+  position: relative;
+  width: 100px;
+  border: 1px solid #000;
+  margin-left: 50px;
+
+
+#elevator-container {
+  display: flex; 
+  position: relative;
+  width: 100%;
+}
+}
+.arrived {
+  background-color: green;
+  color: rgb(28, 241, 124);
+}
